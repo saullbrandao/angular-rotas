@@ -7,13 +7,19 @@
       [routerLinkActiveOptions]="{ exact: true }"
       >Home</a
     >
-    <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
-    <a class="nav-link" routerLink="/cursos" routerLinkActive="active"
-      >Cursos</a
+    <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+    <a class="nav-link" routerLink="cursos" routerLinkActive="active">Cursos</a>
+    <a
+      class="nav-link"
+      [routerLink]="['curso', idCurso.value]"
+      routerLinkActive="active"
+      >Curso com Id</a
     >
   </nav>
 </header>
 
 <main class="container">
+  <p>Entre com o id do curso</p>
+  <input type="text" #idCurso (input)="(0)" />
   <router-outlet></router-outlet>
 </main>
