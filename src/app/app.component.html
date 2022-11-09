@@ -8,7 +8,13 @@
       >Home</a
     >
     <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
-    <a class="nav-link" routerLink="cursos" routerLinkActive="active">Cursos</a>
+    <a
+      class="nav-link"
+      routerLink="cursos"
+      [queryParams]="{ pagina: 1 }"
+      routerLinkActive="active"
+      >Cursos</a
+    >
     <a
       class="nav-link"
       [routerLink]="['curso', idCurso.value]"
