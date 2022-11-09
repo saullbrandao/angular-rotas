@@ -1,0 +1,38 @@
+<h5>Criar/Editar Aluno</h5>
+
+<div class="col-12">
+  <div class="row g-2">
+    <div class="col-12 form-floating">
+      <input
+        class="form-control"
+        type="text"
+        id="disabled"
+        disabled
+        [(ngModel)]="aluno.id"
+      />
+      <label for="disabled">ID</label>
+    </div>
+  </div>
+  <div class="row g-2">
+    <div class="col-12 form-floating">
+      <input
+        class="form-control"
+        type="text"
+        id="nome"
+        [(ngModel)]="aluno.nome"
+      />
+      <label for="nome" class="active">Nome</label>
+    </div>
+  </div>
+  <div class="row g-2">
+    <div class="col-12 form-floating">
+      <input
+        class="form-control"
+        type="email"
+        id="email"
+        [(ngModel)]="aluno.email"
+      />
+      <label for="email" class="active">Email</label>
+    </div>
+  </div>
+</div>

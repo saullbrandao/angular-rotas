@@ -15,17 +15,10 @@
       routerLinkActive="active"
       >Cursos</a
     >
-    <a
-      class="nav-link"
-      [routerLink]="['curso', idCurso.value]"
-      routerLinkActive="active"
-      >Curso com Id</a
-    >
+    <a class="nav-link" routerLink="alunos" routerLinkActive="active">Alunos</a>
   </nav>
 </header>
 
 <main class="container">
-  <p>Entre com o id do curso</p>
-  <input type="text" #idCurso (input)="(0)" />
   <router-outlet></router-outlet>
 </main>
