@@ -1,1 +1,34 @@
-<p>login works!</p>
+<h5>Login</h5>
+
+<div class="row">
+  <div class="col-md form-floating g-2">
+    <input
+      class="form-control"
+      type="text"
+      id="usuario"
+      placeholder="Usuário"
+      [(ngModel)]="usuario.nome"
+    />
+    <label for="usuario">Usuário</label>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md form-floating g-2">
+    <input
+      class="form-control"
+      type="password"
+      id="password"
+      placeholder="Senha"
+      [(ngModel)]="usuario.senha"
+    />
+    <label for="password">Senha</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="g-2">
+    <button type="submit" class="btn btn-primary" (click)="login()">
+      Login
+    </button>
+  </div>
+</div>
