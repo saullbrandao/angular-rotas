@@ -19,11 +19,9 @@ export class AlunosGuard implements CanActivateChild {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    console.log(state);
-    console.log(childRoute);
-    if (state.url.includes('editar')) {
-      return false;
-    }
+    // if (state.url.includes('editar')) {
+    //   return false;
+    // }
     return true;
   }
 }
