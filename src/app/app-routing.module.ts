@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [AuthGuard],
     canLoad: [AuthGuard],
+  },
+  {
+    path: '**',
+    component: NotFoundPageComponent,
   },
 ];
 
