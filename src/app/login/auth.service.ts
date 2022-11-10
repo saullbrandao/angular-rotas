@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private router: Router) {}
 
   login(user: User) {
-    if (user.nome === 'a@a.com' && user.senha === '123') {
+    if (user.nome === 'a@a' && user.senha === '123') {
       this.isAuthenticated = true;
 
       this.showMenuEmitter.emit(true);
@@ -22,5 +22,9 @@ export class AuthService {
       this.isAuthenticated = false;
       this.showMenuEmitter.emit(false);
     }
+  }
+
+  isUserAuthenticated() {
+    return this.isAuthenticated;
   }
 }
